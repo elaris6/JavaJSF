@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>ManagedBeans JSF</title>
+    </head>
+    <body>
+        <h:outputLabel value="ManagedBeans CDI en JSF"/>
+        <h:form>
+            <table>
+                <tr>
+                    <td><h:outputLabel for="nombre" value="Nombre:"></h:outputLabel></td>
+                    <td><h:inputText id="nombre" value="#{candidato.nombre}"></h:inputText></td>
+                    <td><h:message for="nombre"></h:message></td>
+                </tr>
+            </table>
+            <!-- Se informa como valor de "action" el nombre de la página destino
+            o como en este caso, un método que devolverá en función de una lógica,
+            la página destino deseada. -->
+            <h:commandButton action="#{vacanteForm.enviar()}" value="Enviar"></h:commandButton>
+        </h:form>
+    </body>
+</html>
