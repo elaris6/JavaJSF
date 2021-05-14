@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemeLocation="http://xmlns.jcp.org/xml/ns/javaee
+                        http://xmlns.jcp.org/xml/ns/web-facesconfig_2_3.xsd"
+    version="2.3">
+    <lifecycle>
+        <phase-listener>
+            beans.lifecycle.DebuggerListener
+        </phase-listener>
+    </lifecycle>
+
+    <!-- En la etiqueta "application" se pueden definir los atributos para la configuración
+    de lenguaje y mensajes. -->
+    <application>
+        <!-- Especificación del lenguaje -->
+        <!-- También se puede modificar el idioma de forma programática en las clases que vayan
+        a mostrar mensajes, que en este ejemplo es "beans.backing.VacanteForm.java", añadiendo la línea
+        "FacesContext.getCurrentInstance().getViewRoot().setLocale("es_US");", por ejemplo.  -->
+        <locale-config>
+            <default-locale>es</default-locale>
+        </locale-config>
+        <!-- Especificación del fichero de literales en "src/main/resources/". Se debe
+        indicar el nombre del fichero sin la extensión ".properties" y tampoco es necesario
+        indicar el idioma del nombre del fichero ("_es", "_en"...). -->
+        <resource-bundle>
+            <base-name>mensajes</base-name>
+            <var>msgs</var>
+        </resource-bundle>
+        <!-- Especificación del fichero de mensajes de "src/main/resources/". Se debe
+        indicar el nombre del fichero sin la extensión ".properties" y tampoco es necesario
+        indicar el idioma del nombre del fichero ("_es", "_en"...). -->
+        <message-bundle>jsf</message-bundle>
+    </application>
+
+</faces-config>

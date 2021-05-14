@@ -23,3 +23,7 @@
 hs_err_pid*
 /02_ManagedBeans/target/
 /03_CicloVidaJSF/target/
+/04_ValidacionesJSF/target/
+/05_ConvertersJSF/target/
+/06_MensajesInternacionalizacion/target/
+/07_EventosListenerJSF/target/
